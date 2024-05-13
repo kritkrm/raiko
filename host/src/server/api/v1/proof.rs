@@ -1,7 +1,6 @@
 use std::{fs::File, path::PathBuf};
 
-use crate::metrics::observe_guest_time;
-use crate::metrics::observe_prepare_input_time;
+use crate::{metrics::observe_guest_time, metrics::observe_prepare_input_time};
 use axum::{debug_handler, extract::State, routing::post, Json, Router};
 use raiko_lib::{
     consts::get_network_spec,
@@ -19,9 +18,9 @@ use crate::{
         dec_current_req, inc_current_req, inc_guest_error, inc_guest_success, inc_host_error,
         inc_host_req_count, observe_total_time,
     },
+    provider::rpc::RpcBlockDataProvider,
     raiko::Raiko,
     request::ProofRequest,
-    rpc_provider::RpcBlockDataProvider,
     ProverState,
 };
 

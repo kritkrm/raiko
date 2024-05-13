@@ -1,4 +1,4 @@
-pub use alloy_primitives::*;
+use alloy_primitives::{Address, Bytes, StorageKey, Uint, U256};
 use alloy_provider::{ProviderBuilder, ReqwestProvider, RootProvider};
 use alloy_rpc_client::{ClientBuilder, RpcClient};
 use alloy_rpc_types::{Block, BlockId, BlockNumberOrTag, EIP1186AccountProofResponse};
@@ -10,7 +10,7 @@ use std::collections::HashMap;
 
 use crate::{
     error::{HostError, HostResult},
-    raiko::BlockDataProvider,
+    provider::BlockDataProvider,
     MerkleProof,
 };
 

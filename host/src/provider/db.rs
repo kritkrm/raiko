@@ -25,7 +25,7 @@ use tokio::runtime::Handle;
 
 use crate::{
     error::{HostError, HostResult},
-    raiko::BlockDataProvider,
+    provider::BlockDataProvider,
     MerkleProof,
 };
 

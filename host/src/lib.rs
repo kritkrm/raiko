@@ -15,10 +15,9 @@
 pub mod error;
 pub mod metrics;
 pub mod preflight;
-pub mod provider_db;
+pub mod provider;
 pub mod raiko;
 pub mod request;
-pub mod rpc_provider;
 pub mod server;
 
 use std::{alloc, collections::HashMap, path::PathBuf};
