@@ -62,7 +62,7 @@ fn set_cached_input(
     tag = "Proving",
     request_body = ProofRequestOpt,
     responses (
-        (status = 200, description = "Successfully created proof for request", body = ProofResponse)
+        (status = 200, description = "Successfully created proof for request", body = Status)
     )
 )]
 #[debug_handler(state = ProverState)]
